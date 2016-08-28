@@ -42,7 +42,7 @@ License along with this program. If not, see
 //EOF is thrown by getbyte_e in mapread.h
 #define eofloop(i) try { while (1) { i; } } catch (exception::eof problem) {}
 
-void getlong(FILE *f,long &i)
+static void getlong(FILE *f,long &i)
 {
 	i = fgetc(f);
 	i |= (fgetc(f) << (8 * 1));
@@ -50,16 +50,16 @@ void getlong(FILE *f,long &i)
 	i |= (fgetc(f) << (8 * 3));
 }
 
-char *strtoupper(char *);
-void showhelp(int,char**);
-int scanparm(int,char **,const char *);
-char *grabparm(int,char **,int);
-char *shiftparm(int,char**);
-FILE *fopen_e(const char*,const char*);
-FILE *extractlump(FILE *wad,long f_size);
+static char *strtoupper(char *);
+static void showhelp(int,char**);
+static int scanparm(int,char **,const char *);
+static char *grabparm(int,char **,int);
+static char *shiftparm(int,char**);
+static FILE *fopen_e(const char*,const char*);
+static FILE *extractlump(FILE *wad,long f_size);
 
-bool dolog;
-inline void log(const char *msg)
+static bool dolog;
+inline static void log(const char *msg)
 {
 	if (!dolog)
 		return;
@@ -239,7 +239,7 @@ int main(int argc,char **argv)
 	}
 }
 
-void showhelp(int argc,char **argv)
+static void showhelp(int argc,char **argv)
 {
 	std::cout << argv[0] << " -h" << std::endl;
 	std::cout << argv[0] << " THINGS LINEDEFS SIDEDEFS VERTEXES SECTORS TEXTMAP [-f] [-v] [-n NAMESPACE]" << std::endl;
@@ -260,7 +260,7 @@ void showhelp(int argc,char **argv)
 	std::cout << "-n\t\tManually choose a namespace for TEXTMAP" << std::endl;
 }
 
-int scanparm(int argc,char **argv,const char *find)
+static int scanparm(int argc,char **argv,const char *find)
 {
 	if (argc <= 1)
 	{
@@ -278,7 +278,7 @@ int scanparm(int argc,char **argv,const char *find)
 	return pos;
 }
 
-char *grabparm(int argc,char **argv,int pos)
+static char *grabparm(int argc,char **argv,int pos)
 {
 	if (argc <= pos)
 	{
@@ -287,7 +287,7 @@ char *grabparm(int argc,char **argv,int pos)
 	return argv[pos];
 }
 
-char *shiftparm(int argc,char **argv)
+static char *shiftparm(int argc,char **argv)
 {
 	static int pos = 1;
 	if (argc <= pos)
@@ -297,7 +297,7 @@ char *shiftparm(int argc,char **argv)
 	return argv[pos++];
 }
 
-FILE *fopen_e(const char *filename,const char *mode)
+static FILE *fopen_e(const char *filename,const char *mode)
 {
 	FILE *result;
 	result = fopen(filename,mode);
@@ -308,7 +308,7 @@ FILE *fopen_e(const char *filename,const char *mode)
 	return result;
 }
 
-FILE *extractlump(FILE *wad,long f_size)
+static FILE *extractlump(FILE *wad,long f_size)
 {
 	long f_pos;
 	long f_ofs;
@@ -335,7 +335,7 @@ FILE *extractlump(FILE *wad,long f_size)
 	return tmp;
 }
 
-char *strtoupper(char *str)
+static char *strtoupper(char *str)
 {
 	char *upr;
 	upr = str;
