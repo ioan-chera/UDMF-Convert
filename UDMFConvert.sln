@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual C++ Express 2005
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DoomConvert", "DoomConvert\DoomConvert.vcproj", "{12ECEE63-3B58-47C1-AC7C-1AB917CCA667}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DoomConvert", "DoomConvertVCProj\DoomConvert.vcproj", "{12ECEE63-3B58-47C1-AC7C-1AB917CCA667}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HexenConvert", "HexenConvert\HexenConvert.vcproj", "{4C0C74F8-56F0-4675-9870-5D8C3876D89D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HexenConvert", "HexenConvertVCProj\HexenConvert.vcproj", "{4C0C74F8-56F0-4675-9870-5D8C3876D89D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZDoomConvert", "ZDooMConvert\ZDoomConvert.vcproj", "{14B9CE40-7DF7-44F2-AFF9-3F1B41C34982}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZDoomConvert", "ZDooMConvertVCProj\ZDoomConvert.vcproj", "{14B9CE40-7DF7-44F2-AFF9-3F1B41C34982}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StrifeConvert", "StrifeConvert\StrifeConvert.vcproj", "{ABAED3BC-472A-4847-B95B-84604AF87D60}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StrifeConvert", "StrifeConvertVCProj\StrifeConvert.vcproj", "{ABAED3BC-472A-4847-B95B-84604AF87D60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
