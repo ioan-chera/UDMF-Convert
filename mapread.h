@@ -17,6 +17,7 @@ License along with this program. If not, see
 <http://www.gnu.org/licenses/>. */
 
 #include <iostream>
+#include <stdio.h>
 #include "exceptions.h"
 
 #define getbyte_e(i,f,v) getchar_e(i,f); \
