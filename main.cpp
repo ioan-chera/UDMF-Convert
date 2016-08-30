@@ -35,6 +35,9 @@ License along with this program. If not, see
 #elif defined(STRIFE)
 #define format strife
 #define format_namespace "Strife"
+#elif defined(ETERNITY)
+#define format eternity
+#define format_namespace "Eternity"
 #else
 #error No input format defined
 #endif
